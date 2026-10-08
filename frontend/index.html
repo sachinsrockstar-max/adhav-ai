@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADHAV AI</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-text">
+        <div class="title">ADHAV 💚</div>
+        <div class="subtitle">your personal AI companion</div>
+      </div>
+      <div class="header-buttons">
+        <button id="memory-button" class="new-chat" type="button">🧠 Memory</button>
+        <button id="new-chat-button" class="new-chat" type="button">+ New chat</button>
+      </div>
+    </header>
+
+    <main id="chat" class="chat" aria-live="polite"></main>
+
+    <form id="chat-form" class="composer" autocomplete="off">
+      <textarea
+        id="message-input"
+        rows="1"
+        placeholder="Message Adhav..."
+        aria-label="Message"
+      ></textarea>
+      <button id="send-button" type="submit" aria-label="Send">➤</button>
+    </form>
+  </div>
+
+  <!-- The Memory panel (hidden until you press the Memory button) -->
+  <div id="memory-overlay" class="overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="memory-title">
+      <div class="modal-header">
+        <h2 id="memory-title">🧠 Adhav's memory</h2>
+        <button id="memory-close" class="small-button" type="button" aria-label="Close">✕</button>
+      </div>
+
+      <p class="modal-note">
+        Adhav only remembers what you save here, or what you tell him with
+        “remember that ...” in the chat. Please don't save passwords, card
+        numbers or OTPs.
+      </p>
+
+      <label class="switch-row">
+        <input type="checkbox" id="memory-toggle" />
+        <span>Memory is <strong id="memory-state">on</strong></span>
+      </label>
+
+      <form id="memory-form" class="memory-form" autocomplete="off">
+        <input
+          id="memory-input"
+          type="text"
+          maxlength="300"
+          placeholder="Add something for Adhav to remember..."
+          aria-label="New memory"
+        />
+        <button id="memory-add" type="submit">Save</button>
+      </form>
+
+      <div id="memory-message" class="memory-message" role="status"></div>
+
+      <ul id="memory-list" class="memory-list"></ul>
+
+      <div class="modal-footer">
+        <button id="memory-delete-all" class="small-button danger" type="button">Delete all</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+  <script src="/static/memory.js"></script>
+</body>
+</html>
