@@ -1,0 +1,39 @@
+﻿git : remote: error: GH013: Repository rule violations found for refs/heads/main.        
+At line:1 char:1
++ git push 2>&1 | Out-File -Encoding utf8 push-error.txt
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (remote: error: ...s/main.        :String) [], Remo 
+   teException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+remote: 
+remote: - GITHUB PUSH PROTECTION        
+remote:   ΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇ
+öΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇö        
+remote:     Resolve the following violations before pushing again        
+remote: 
+remote:     - Push cannot contain secrets        
+remote: 
+remote:             
+remote:      (?) Learn how to resolve a blocked push        
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-
+and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push 
+       
+remote:             
+remote:             
+remote:       ΓÇöΓÇö GCP API Key Bound to a Service Account 
+ΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇö        
+remote:        locations:        
+remote:          - commit: 89128771ffe7e1e25b2d78036af290acfa890440        
+remote:            path: .env.example:1        
+remote:             
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the 
+secret.        
+remote:        https://github.com/sachinsrockstar-max/adhav-ai/security/secret-scanning/unblock-
+secret/3KPvMCGdVe345wu0BjWCx6aYquN        
+remote:             
+remote: 
+remote: 
+To https://github.com/sachinsrockstar-max/adhav-ai.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/sachinsrockstar-max/adhav-ai.git'
